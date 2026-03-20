@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IIB｜營運、研發、行銷、財務管理 互動教學｜NTU</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">NTU</div>
+      <div class="brandText">
+        <div class="course">IIB｜Introduction to International Business</div>
+        <div class="topic" id="topicTitle">企業功能：營運、研發、行銷與財務管理</div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="btnLang" title="Toggle language (L)">中文 / EN</button>
+      <button class="btn" id="btnPresenter" title="Presenter mode (P)">投影模式</button>
+      <button class="btn" id="btnReset" title="Reset (R)">重置互動</button>
+      <button class="btn" id="btnHelp" title="Help (?)">?</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="sidebar" aria-label="Sections">
+      <div class="navTitle" id="navTitle">單元導覽</div>
+
+      <button class="navItem active" data-view="start" id="navStart">🏠 開場：企業功能總覽</button>
+
+      <div class="navGroup">
+        <div class="navGroupLabel ops" id="navGroupOps">⚙️ 營運管理</div>
+        <button class="navItem ops-item" data-view="ops_intro" id="navOpsIntro">01｜什麼是營運管理</button>
+        <button class="navItem ops-item" data-view="newsvendor" id="navNewsvendor">02｜Newsvendor Problem</button>
+        <button class="navItem ops-item" data-view="bullwhip" id="navBullwhip">03｜Bullwhip Effect</button>
+        <button class="navItem ops-item" data-view="supply_game" id="navSupplyGame">04｜供應鏈遊戲</button>
+      </div>
+
+      <div class="navGroup">
+        <div class="navGroupLabel rd" id="navGroupRD">🔬 研發管理</div>
+        <button class="navItem rd-item" data-view="rd_intro" id="navRDIntro">05｜技術S曲線</button>
+        <button class="navItem rd-item" data-view="disruptive" id="navDisruptive">06｜破壞性技術變革</button>
+        <button class="navItem rd-item" data-view="llm_search" id="navLLM">07｜LLM vs 搜尋引擎</button>
+      </div>
+
+      <div class="navGroup">
+        <div class="navGroupLabel mkt" id="navGroupMkt">📣 行銷管理</div>
+        <button class="navItem mkt-item" data-view="mkt_intro" id="navMktIntro">08｜行銷組合 4P</button>
+        <button class="navItem mkt-item" data-view="consumer_products" id="navConsumer">09｜消費品與行銷組合</button>
+        <button class="navItem mkt-item" data-view="pizza_game" id="navPizza">10｜Pizza Store 競賽</button>
+      </div>
+
+      <div class="navGroup">
+        <div class="navGroupLabel fin" id="navGroupFin">💰 財務管理</div>
+        <button class="navItem fin-item" data-view="acct_finance" id="navAcct">11｜會計與財務的連結</button>
+        <button class="navItem fin-item" data-view="corp_finance" id="navCorpFin">12｜公司財務要素</button>
+      </div>
+
+      <button class="navItem" data-view="wrap" id="navWrap">🔁 收斂：一張圖串起來</button>
+
+      <div class="navFooter">
+        <div class="hint" id="kbdHint">快捷鍵：← → 切換｜L語言｜P投影｜R重置｜?說明</div>
+      </div>
+    </nav>
+
+    <section class="content" id="content" tabindex="-1">
+      <!-- Views injected here -->
+    </section>
+  </main>
+
+  <dialog id="helpDialog">
+    <div class="dialogHead">
+      <div class="dialogTitle" id="helpTitle">使用說明</div>
+      <button class="iconBtn" id="btnCloseHelp" aria-label="Close">✕</button>
+    </div>
+    <div class="dialogBody" id="helpBody"></div>
+  </dialog>
+
+  <footer class="footer">
+    <div class="footLeft" id="footLeft">
+      建議投影：按「投影模式」可放大字級；共 2 小時教學，涵蓋營運／研發／行銷／財務四大企業功能。
+    </div>
+    <div class="footRight" id="footRight">
+      v1.0｜IIB 2026｜Made for class discussion
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
